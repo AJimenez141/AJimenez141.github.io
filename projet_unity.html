@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Alex Jiménez - Unity</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+					<header id="header">
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Accueil</a></li>
+							<li class="active"><a href="projet_calepinex.html">Projet Jeu Vidéo Unity</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/ajimenez14/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/AJimenez141" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Projet Jeu Vidéo Unity</h1>
+									<p> Ayant toujours voulu créer mon propre jeu vidéo et disposant désormais de suffisemment de connaissances en
+                                        développement, j'ai décidé de me lancer dans ce projet avec un ami novice en programmation et un ami passionné 
+                                        de game-design. Pour cela nous avons utilisé le moteur de jeux Unity qui est une référence en la matière.<br/></p>
+                                    
+                                        <p>Technologies utilisées: Unity Engine, C#, VSCode</p>
+								</header>
+								<div class="image main"><img src="images/unity.jpg" alt="" /></div>
+								<p>Problématique: Etant débutants dans ce domaine, notre but était de réaliser un jeu relativement simple de type "Action-platformer"
+                                    similaire aux vieux jeux Castlevania, Ninja Gaiden, Contra... avec toutes les fonctionnalités de base que l'on peut retrouver dans 
+                                    ce type de jeux. 
+                                </p>
+                                <p>Solution: Nous avons donc décidé de créer un jeu basé sur les personnages X-Men en utilisant des assets (animations, images...)
+                                    issues de vieux jeux Marvel. Le développement d'un jeu sous Unity Engine se fait en langage C#, que je n'avais jamais eu l'occasion
+                                    d'utiliser avant, il y a donc eu une petite phase d'apprentissage au cours de la création du jeu.
+                                    
+                                    Le jeu aurait donc plusieurs personnages jouables qui auraient tous  un pannel d'actions commun: Bouger, 
+                                    sauter, s'accroupir, attaquer, prendre des dégâts et mourir. En plus de ces actions, chaque personnages disposerait 
+                                    d'une attaque "spéciale" et d'une attaque "ultime" qui lui sont propres. Nous avons donc commencé par coder un personnage lambda
+                                    disposant de toutes les capacités par défaut (voir vidéo ci-dessous). Pour parvenir à ce résultat, nous avons dû programmer le 
+                                    personnage à l'aide de propriétés physiques assez complexes utilisées par Unity, heureusement il existe beaucoup de ressources en ligne.
+                                </p>
+                                <video width="920" controls>
+                                    <source src="images/unity-01.mp4" type="video/mp4">
+                                  Your browser does not support the video tag.
+                                  </video>
+                                  <p>Après quoi il ne reste plus qu'à programmer les capacités uniques de chaque personnage grâce à l'héritage de classes. Nous avons 
+                                    donc commencé par le personnage de Cyclops qui dispose de 2 projectiles différents en guise de capacités uniques: Son "attaque spéciale" 
+                                    est un simple projectile qui provoque des dégâts au contact d'un ennemi et son "attaque ultime" est un laser qui provoque des dégâts 
+                                    en continu dans le temps sur tous les ennemis qu'il rencontre. L'utilisation de chacune de ces 2 attaques est représentée
+                                    respectivement par la barre bleue et la barre jaune du personnage. La barre rouge représentant la santé du personnage. Chaque 
+                                    barre peut être restaurée à l'aide d'objets spécifiques.
+                                </p>
+                                <video width="920" controls>
+                                    <source src="images/unity-02.mp4" type="video/mp4">
+                                  Your browser does not support the video tag.
+                                  </video>
+                                  <p>Nous avons également créé un premier type d'ennemi avec des actions plutôt basique. Son "intelligence artificielle" a été conçue
+									via un "statemachine", soit un arbre de comportements qui sont liés par différentes conditions. Par exemple, si l'ennemi est loin du
+									joueur, il va chercher à se rapprocher de lui, puis une fois assez proche il pourra soit attaquer au poing, au pied ou bien reculer.
+                                </p>
+								<video width="920" controls>
+                                    <source src="images/unity-03.mp4" type="video/mp4">
+                                  Your browser does not support the video tag.
+                                  </video>
+                                <p>L'écran de sélection de personnage se présente comme ceci. L'utilisateur peut cliquer sur les flèches pour faire son choix puis sur 
+									le bouton start pour valider sa sélection. Le programme derrière cet écran est plutôt simple, il s'agit d'un objet List contenant
+									les informations des personnages et on itère simplement à travers la liste. Ces informations sont ensuite sauvegardées dans des 
+									"playerprefs" (variables environnement) selon le personnage choisi puis récupérées dans la scène suivante. Le personnage jouable 
+									est alors instancié dans la nouvelle scène et le joueur peut commencer à jouer.
+								</p>
+								<video width="920" controls>
+                                    <source src="images/unity-04.mp4" type="video/mp4">
+                                  Your browser does not support the video tag.
+                                  </video>
+
+							</section>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

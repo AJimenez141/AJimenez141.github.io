@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Alex Jiménez - Vinted</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+					<header id="header">
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Accueil</a></li>
+							<li class="active"><a href="projet_calepinex.html">Projet Scrapper Vinted</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/ajimenez14/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/AJimenez141" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Projet Scrapper Vinted</h1>
+									<p>Utilisateur régulier de Vinted (Marché en ligne d'articles d'occasion), j'ai constaté que le service ne 
+                                        propose pas d'alertes en temps réel pour la mise en ligne de nouveaux articles. J'ai donc réalisé ce projet 
+                                        en réponse à ce besoin. <br/></p>
+                                    <p>Technologies utilisées: Python, Selenium, VSCode, Fichier CSV, Webhooks </p>
+								</header>
+								<div class="image main"><img src="images/vinted.jpg" alt="" /></div>
+								<p>Problématique: Mon objectif était donc de développer un programme qui chercherait pour moi les nouveaux articles
+                                    ajoutés sur le site, puis qui diffuserait les résultats à un endroit où je pourrais le voir et accéder y accéder facilement.
+                                </p>
+                                <p>Solution: En faisant mes recherches, j'ai découvert Selenium, un framework de test et d'automatisation web qui fonctionne,
+                                    entre autres, avec Python. Ayant des connaissances en Python de par mon expérience au BTS SIO, j'ai donc opté pour cette solution.
+                                    Sur Vinted, il est possible de filtrer ses recherches avec des mots-clés, différentes catégories, des gammes de prix... Et de trier 
+                                    l'affichage des résultats par date d'ajout. Par chance toutes ces options se retrouvent dans l'URL de recherche Vinted. Je n'avais
+                                    donc qu'à récupérer les URLs des recherches qui m'intéressent puis de les stocker dans un fichier CSV au travers duquel le script Python
+                                    va cycler continuellement pour trouver de nouveaux articles. Un autre fichier CSV sert de "base de données", où le script va y ajouter les résultats 
+                                    des nouvelles recherches et s'en servir de comparaison pour qu'il n'y ait pas de doublons et que le programme ne retourne que des nouveautés.
+                                    Enfin pour la diffusion, j'ai choisi d'utiliser Discord car je me sers régulièrement de cette applications et qu'elle propose un
+                                    service de "Webhooks". Il ne reste donc qu'à formater l'affichage des données à envoyer et le résultat est ainsi transmis via requête 
+                                    POST à l'adresse du Webhook Discord défini. L'affichage des résultats se présente comme ceci (Voir captures d'écran ci-dessous).
+                                    
+                                </p>
+                                <div class="image main"><img src="images/vinted-01.png" alt="" /></div>
+                                <div class="image main"><img src="images/vinted-02.png" alt="" /></div>
+
+							</section>
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
